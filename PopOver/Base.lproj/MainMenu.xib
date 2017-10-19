@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="kAf-X0-KzQ" customClass="StatusMenuController">
+            <connections>
+                <outlet property="menu" destination="sHK-Xo-yF0" id="FUM-zi-gnC"/>
+            </connections>
+        </customObject>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="sHK-Xo-yF0">
+            <items>
+                <menuItem title="Preferences" id="dWi-GA-5UM">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="BHC-Rh-J3l"/>
+                <menuItem isSeparatorItem="YES" id="YbI-oK-4tE"/>
+                <menuItem title="Custom View" id="FoO-l5-58m">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <outlet property="view" destination="Ra8-9C-qmR" id="SiO-zX-sFa"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="51U-wv-Qrg"/>
+                <menuItem isSeparatorItem="YES" id="JRy-vt-4M8"/>
+                <menuItem title="Quit" id="KX4-wf-mBH">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="kAf-X0-KzQ" id="qBo-3q-coL"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="180.5" y="193.5"/>
+        </menu>
+        <customView identifier="miv" id="Ra8-9C-qmR" customClass="MenuItemView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ksv-Qn-915">
+                    <rect key="frame" x="14" y="30" width="81" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h43-vP-urJ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttenQuit:" target="Ra8-9C-qmR" id="Xvs-jD-rP2"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYg-p8-lXR">
+                    <rect key="frame" x="97" y="24" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ISB" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="uEd-gz-L6y">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="butten" destination="Ksv-Qn-915" id="ikh-sO-qTG"/>
+            </connections>
+            <point key="canvasLocation" x="166" y="396"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="ISB" width="16" height="16"/>
+    </resources>
+</document>
